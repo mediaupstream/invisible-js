@@ -12,22 +12,25 @@ Try it out online at http://mediaupstream.com/sandbox/invisible-js
 
 Create an instance of `Invisible`, passing in options if you want:  
 
-    var inv = new Invisible({
-      char1: 'A',    // default: space character. Takes the place of the binary 1
-      char2: 'B',    // default: tab character. Takes the place of the binary 0
-      end: 'x',      // default: newline character. Signifies the end of the encoding
-      debug: false   // default: false. Enabling will output debug information to the console
-    });
+```javascript
+var inv = new Invisible({
+  char1: 'A',    // default: space character. Takes the place of the binary 1
+  char2: 'B',    // default: tab character. Takes the place of the binary 0
+  end: 'x',      // default: newline character. Signifies the end of the encoding
+  debug: false   // default: false. Enabling will output debug information to the console
+});
+```
   
   
 Now you can `encode` and `decode` messages like so:  
 
-    // results in 'BAABABBBBAABABBAx'
-    var hidden_message = inv.encode('hi'); 
-    
-    // results in 'hi'
-    var message = inv.decode( hidden_message );
-  
+```javascript
+// results in 'BAABABBBBAABABBAx'
+var hidden_message = inv.encode('hi'); 
+
+// results in 'hi'
+var message = inv.decode( hidden_message );
+```
   
 # License
 
