@@ -61,7 +61,7 @@
 
     $('.read-manifesto').click(function(e){
       e.preventDefault();
-      $.get('hackers.manifesto?d='+ Date.now(), function(data){
+      $.get('hackers.manifesto', function(data){
         $('.ta').val( data ).trigger('keyup')
       })
     })
