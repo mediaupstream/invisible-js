@@ -25,11 +25,8 @@ var inv = new Invisible({
 Now you can `encode` and `decode` messages like so:  
 
 ```javascript
-// results in 'BAABABBBBAABABBAx'
-var hidden_message = inv.encode('hi'); 
-
-// results in 'hi'
-var message = inv.decode( hidden_message );
+var hidden_message = inv.encode('hi');        // results in 'BAABABBBBAABABBAx'
+var message = inv.decode( hidden_message );   // results in 'hi'
 ```
   
 # License
