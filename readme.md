@@ -1,9 +1,9 @@
 ## Invisible.js 
 
-### Make Stuff Invisible™ by transforming your input into Binary1 ...with a Twist.
+### Make Stuff Invisible™ by transforming your input into Binary ...with a Twist.
 
 
-By substituting2 a space and tab character with the resulting 1s and 0s we can achieve invisibility.  
+By substituting a `space` and `tab` character with the resulting `1s` and `0s` we can achieve invisibility.  
 
 Try it out online at http://mediaupstream.com/sandbox/invisible-js  
 
