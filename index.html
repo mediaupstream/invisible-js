@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>invisible.js</title>
   <link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/main.css">
   <script src="js/jquery-1.7.1.min.js"></script>
   <script src="js/invisible.js"></script>
   <script>
@@ -49,9 +49,9 @@
       $('.js-len').text( unitify($('.ta').val().length) );
     });
 
-    $('h1').click(function(){
-      $('body').toggleClass('mini');
-    })
+    // $('h1').click(function(){
+    //   $('body').toggleClass('mini');
+    // })
 
     $('#crafted').mouseover(function(e){
       $(this).addClass('bg-anim')
@@ -61,7 +61,7 @@
 
     $('.read-manifesto').click(function(e){
       e.preventDefault();
-      $.get('hackers.manifesto', function(data){
+      $.get('old_pond.haiku', function(data){
         $('.ta').val( data ).trigger('keyup')
       })
     })
@@ -71,43 +71,26 @@
 </head>
 <body>
   
-  <a href="http://mediaupstream.com" id="crafted" class="">Crafted by <em>Media Upstream</em></a>
   
-  <div class="col1">
-    <h1 title="Click to Collapse">invisible.js</h1>
+  <div class="container">
+    <a href="http://mediaupstream.com" id="crafted" class="">Created by <em>Media Upstream</em></a>
+    <h1>invisible.js</h1>
     <br>
-    <p>
-      <code>Invisible.js</code> <em>Makes Stuff Invisible</em><sup><small>&trade;</small></sup> by transforming your input into Binary<sup><small>1</small></sup> with a Twist.
-    </p>
-    <p> 
-      By substituting<sup><small>2</small></sup> a <strong>space</strong> and <strong>tab</strong> character with the resulting <strong>1s</strong> and <strong>0s</strong> we can achieve invisibility.
+    <p class="description">
+      <strong>Invisible.JS is a text to binary conversion tool...</strong> but, you can change the values for 1 and 0 to whatever you want. For example, if you make 1 a <code>SPACE</code> character and 0 a <code>TAB</code> character you can then encode your message and the result will be <em>invisible!</em>
     </p>
     
     <p>
-      Try it out on the <a href="#insert-manifesto" title="Insert the Hackers Manifesto" class="read-manifesto"> Hackers Manifesto </a>!
+      Try it out on this <a href="#insert-manifesto" title="Insert Haiku" class="read-manifesto"> Haiku </a>!
     </p>
   
-    
-    <p class="footnotes">
-      1. Literally meaning "Composed of two pieces" <br>
-      2. Change <strong>C1</strong>, <strong>C2</strong> and <strong>END</strong> to remap the defaults. <br>
-      <br>
-      <span style="float:right"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mediaupstream.com/sandbox/invisible-js/" data-text="Invisible.js - Make Stuff Invisible™" data-hashtags="jquery,secret,encoding">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></span>
-
-      <a href="https://github.com/mediaupstream/invisible-js" class="gh">Source on GitHub</a>
-
-    </p>
-  </div>
-  
-  <div class="col2">
     
     <div class="controls">
       <a href="#" id="js-hide" data-type="encode" class="btn js-crypt">ENCODE</a>
       <a href="#" id="js-show" data-type="decode" class="btn js-crypt">DECODE</a>
-      <span title="Character 1: Default is SPACE" class="tip bx">C1</span><input type="text" class="char" data-char="char1" val=" " placeholder="space">
-      <span title="Character 2: Default is TAB" class="tip bx">C2</span><input type="text" class="char" data-char="char2" val="\t" placeholder="tab">
-      <span title="End Character: Default is NEWLINE" class="tip bx">END</span><input type="text" class="char" data-char="end" val="\n" placeholder="\n">
+      <span title="Character 1: Default is SPACE" class="tip bx">1 &#8644; </span><input type="text" class="char" data-char="char1" val=" " placeholder="space">
+      <span title="Character 2: Default is TAB" class="tip bx">0 &#8644; </span><input type="text" class="char" data-char="char2" val="\t" placeholder="tab">
+      <!-- <span title="End Character: Default is NEWLINE" class="tip bx">END</span><input type="text" class="char" data-char="end" val="\n" placeholder="\n"> -->
     </div>
     
     <div class="wrap1">
@@ -115,7 +98,19 @@
       <textarea class="ta" val=""></textarea>
       <span class="js-len bx">0 bytes</span>
     </div>
+
+  
+
+    <p class="footnotes">
+      <span style="float:right"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mediaupstream.com/sandbox/invisible-js/" data-text="Invisible.js - Make Stuff Invisible™" data-hashtags="jquery,secret,encoding">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></span>
+      <a href="https://github.com/mediaupstream/invisible-js" class="gh">Source on GitHub</a>
+    </p>
+
   </div>  
+
+  
+
   <div class="bm"> </div>
     
 </body>
